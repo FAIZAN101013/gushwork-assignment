@@ -134,3 +134,46 @@ appNext?.addEventListener("click", () => {
 appPrev?.addEventListener("click", () => {
   slider.scrollBy({ left: -420, behavior: "smooth" });
 });
+
+const modal = document.getElementById("datasheetModal");
+const openBtn = document.getElementById("openModal");
+const closeBtn = document.querySelector(".close-btn");
+
+// OPEN
+openBtn.addEventListener("click", () => {
+  modal.classList.add("show");
+});
+
+// CLOSE (X button)
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("show");
+});
+
+// CLOSE when clicking outside
+window.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.remove("show");
+  }
+});
+
+
+const quoteModal = document.getElementById("quoteModal");
+const openQuoteBtn = document.getElementById("openQuoteModal");
+const closeQuoteBtn = document.querySelector(".close-quote");
+
+// OPEN
+openQuoteBtn.addEventListener("click", () => {
+  quoteModal.classList.add("show");
+});
+
+// CLOSE (X)
+closeQuoteBtn.addEventListener("click", () => {
+  quoteModal.classList.remove("show");
+});
+
+// CLOSE ON OUTSIDE CLICK
+window.addEventListener("click", (e) => {
+  if (e.target === quoteModal) {
+    quoteModal.classList.remove("show");
+  }
+});

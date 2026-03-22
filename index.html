@@ -404,9 +404,10 @@
 
         <!-- BUTTON -->
         <div class="specs-btn">
-          <button>
-           <i class="bi bi-arrow-down-circle-fill"></i> Download Full Technical Datasheet
-          </button>
+         <button id="openModal">
+  <i class="bi bi-arrow-down-circle-fill"></i>
+  Download Full Technical Datasheet
+</button>
         </div>
 
       </div>
@@ -486,9 +487,9 @@
         </div>
 
         <!-- BUTTON -->
-        <div class="features-btn">
-          <button>Request a Quote</button>
-        </div>
+       <div class="features-btn">
+  <button id="openQuoteModal">Request a Quote</button>
+</div>
 
       </div>
     </section>
@@ -1094,6 +1095,63 @@
 
 </footer>
 
+<!-- MODAL -->
+<div id="datasheetModal" class="modal">
+  <div class="modal-box">
+
+    <!-- HEADER -->
+    <div class="modal-header">
+      <h3>Let us email the entire catalogue to you</h3>
+      <span class="close-btn">&times;</span>
+    </div>
+
+    <!-- BODY -->
+    <div class="modal-body">
+      <label>Your Email *</label>
+      <input type="email" placeholder="example@gmail.com" required />
+
+      <label>Your Contact (Optional)</label>
+      <input type="text" placeholder="+91-0000000000" />
+    </div>
+
+    <!-- FOOTER -->
+    <div class="modal-footer">
+      <button class="download-btn">Download Brochure</button>
+    </div>
+
+  </div>
+</div>
+<!-- REQUEST QUOTE MODAL -->
+<div id="quoteModal" class="modal">
+  <div class="modal-box">
+
+    <!-- HEADER -->
+    <div class="modal-header">
+      <h3>Request a call back</h3>
+      <span class="close-quote">&times;</span>
+    </div>
+
+    <!-- BODY -->
+    <div class="modal-body">
+      <input type="text" placeholder="Full Name" />
+      <input type="text" placeholder="Company Name" />
+      <input type="email" placeholder="Email Address" />
+
+      <div class="phone-field">
+        <select>
+          <option>+91</option>
+        </select>
+        <input type="text" placeholder="7003026616" />
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="modal-footer">
+      <button class="submit-btn">Submit Form</button>
+    </div>
+
+  </div>
+</div>
     <script src="script.js"></script>
   </body>
 </html>
