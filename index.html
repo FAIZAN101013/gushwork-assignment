@@ -1,44 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gushwork Assignment</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gushwork Assignment</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="nav">
+        <div class="logo">
+          <img src="logo.png" alt="Mangalam Pipes Logo" />
+        </div>
 
-<header class="header">
-  <div class="nav">
-    
-    <div class="logo">
-      <img src="logo.png" alt="Mangalam Pipes Logo" />
-    </div>
-    
-    <nav class="nav-links">
-      <a href="#">About Us</a>
-      <div class="dropdown">
-         <a href="#">Products 
-          <span class="arrow-icon">
-          <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
-          <path d="M5.22013 6.28255L0.220135 1.28255C0.0792384 1.14165 8.38803e-05 0.950558 8.38905e-05 0.7513C8.39007e-05 0.552043 0.0792385 0.360947 0.220135 0.22005C0.361031 0.0791541 0.552127 -4.7718e-07 0.751385 -4.69954e-07C0.950642 -4.62729e-07 1.14174 0.0791541 1.28263 0.22005L5.75076 4.68943L10.2201 0.221301C10.2899 0.151536 10.3727 0.0961956 10.4639 0.0584392C10.555 0.0206828 10.6527 0.00124975 10.7514 0.00124976C10.85 0.00124976 10.9477 0.0206828 11.0389 0.0584392C11.13 0.0961956 11.2129 0.151536 11.2826 0.221301C11.3524 0.291066 11.4077 0.373889 11.4455 0.465041C11.4833 0.556193 11.5027 0.653889 11.5027 0.752551C11.5027 0.851213 11.4833 0.948909 11.4455 1.04006C11.4077 1.13121 11.3524 1.21404 11.2826 1.2838L6.28263 6.2838C6.21287 6.35364 6.13001 6.40902 6.03881 6.44677C5.9476 6.48451 5.84984 6.50388 5.75112 6.50377C5.65241 6.50365 5.5547 6.48405 5.46358 6.44609C5.37246 6.40813 5.28973 6.35255 5.22013 6.28255Z" fill="#262A2E"/>
-        </svg>
-      </span>
-         </a>
+        <nav class="nav-links">
+          <a href="#">About Us</a>
+          <div class="dropdown">
+            <a href="#"
+              >Products
+              <span class="arrow-icon">
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none">
+                  <path
+                    d="M5.22013 6.28255L0.220135 1.28255C0.0792384 1.14165 8.38803e-05 0.950558 8.38905e-05 0.7513C8.39007e-05 0.552043 0.0792385 0.360947 0.220135 0.22005C0.361031 0.0791541 0.552127 -4.7718e-07 0.751385 -4.69954e-07C0.950642 -4.62729e-07 1.14174 0.0791541 1.28263 0.22005L5.75076 4.68943L10.2201 0.221301C10.2899 0.151536 10.3727 0.0961956 10.4639 0.0584392C10.555 0.0206828 10.6527 0.00124975 10.7514 0.00124976C10.85 0.00124976 10.9477 0.0206828 11.0389 0.0584392C11.13 0.0961956 11.2129 0.151536 11.2826 0.221301C11.3524 0.291066 11.4077 0.373889 11.4455 0.465041C11.4833 0.556193 11.5027 0.653889 11.5027 0.752551C11.5027 0.851213 11.4833 0.948909 11.4455 1.04006C11.4077 1.13121 11.3524 1.21404 11.2826 1.2838L6.28263 6.2838C6.21287 6.35364 6.13001 6.40902 6.03881 6.44677C5.9476 6.48451 5.84984 6.50388 5.75112 6.50377C5.65241 6.50365 5.5547 6.48405 5.46358 6.44609C5.37246 6.40813 5.28973 6.35255 5.22013 6.28255Z"
+                    fill="#262A2E"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+          <a href="#"><button class="contact-btn">Contact Us</button></a>
+          <div class="menu-toggle" id="menuToggle"></div>
+        </nav>
       </div>
-      <a href="#"><button class="contact-btn">Contact Us</button></a>
-       <div class="menu-toggle" id="menuToggle"></div>
-    </nav>
+    </header>
+    <!--Hero section-->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="breadcrumb">
+          <a href="#products">Products</a>
 
-    
+          <span class="arrow">
+            <svg width="12" height="12" viewBox="0 0 12 12">
+              <path
+                d="M4 2L8 6L4 10"
+                stroke="#4D545C"
+                stroke-width="2"
+                fill="none"
+              />
+            </svg>
+          </span>
 
-  </div>
-</header>
+          <a href="#" class="active">Two For One Twister</a>
+        </div>
+        <div class="left">
+          <div class="carousel">
+            <button class="prev">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <img id="main" src="hero1.jpg" alt="Hero Image" />
+            <button class="next">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
-
