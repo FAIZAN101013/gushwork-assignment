@@ -56,10 +56,10 @@ cursor: pointer;
 /* ================= HERO ================= */
 .hero {
 position: relative;
-padding: 100px 0;
-border-top: 1px solid #E1E3E8;
-background: #FFFFFF;
-overflow: hidden;
+  padding: 40px 0 100px; /* TOP reduced */
+  border-top: 1px solid #E1E3E8;
+  background: #FFFFFF;
+  overflow: hidden;
 }
 
 /* NOISE TEXTURE */
