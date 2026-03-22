@@ -5,18 +5,16 @@ const header = document.querySelector(".header");
 window.addEventListener("scroll", () => {
   const currentScrollY = window.scrollY;
 
-  // show after first fold
   if (currentScrollY > 100) {
     header.classList.add("show-header");
   } else {
     header.classList.remove("show-header");
   }
 
-  // hide on scroll down, show on scroll up
   if (currentScrollY > lastScrollY) {
-    header.style.transform = "translateY(-100%)"; // hide
+    header.style.transform = "translateY(-100%)";
   } else {
-    header.style.transform = "translateY(0)"; // show
+    header.style.transform = "translateY(0)";
   }
 
   lastScrollY = currentScrollY;
@@ -26,35 +24,46 @@ window.addEventListener("scroll", () => {
 // ===== CAROUSEL =====
 const mainImage = document.getElementById("mainImage");
 const thumbs = document.querySelectorAll(".thumb");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 
-thumbs.forEach((thumb) => {
+// images array
+const images = Array.from(thumbs).map(t => t.src);
+let index = 0;
+
+// thumbnail click
+thumbs.forEach((thumb, i) => {
   thumb.addEventListener("click", () => {
     mainImage.src = thumb.src;
+    index = i; // 🔥 FIX
 
     document.querySelector(".thumb.active")?.classList.remove("active");
     thumb.classList.add("active");
   });
 });
 
-const images = Array.from(thumbs).map(t => t.src);
-let index = 0;
-
-document.querySelector(".next").onclick = () => {
+// next button
+nextBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // 🔥 FIX
   index = (index + 1) % images.length;
   updateImage();
-};
+});
 
-document.querySelector(".prev").onclick = () => {
+// prev button
+prevBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // 🔥 FIX
   index = (index - 1 + images.length) % images.length;
   updateImage();
-};
+});
 
+// update image
 function updateImage() {
   mainImage.src = images[index];
 
   document.querySelector(".thumb.active")?.classList.remove("active");
   thumbs[index].classList.add("active");
 }
+
 
 // ===== ZOOM FUNCTIONALITY =====
 const img = document.getElementById("mainImage");
@@ -87,7 +96,6 @@ function moveLens(e) {
   lens.style.left = (x - lensSize) + "px";
   lens.style.top = (y - lensSize) + "px";
 
-  // preview background
   preview.style.backgroundImage = `url(${img.src})`;
 
   const zoomLevel = 2;
@@ -99,28 +107,30 @@ function moveLens(e) {
      -${(y * zoomLevel) - preview.offsetHeight / 2}px`;
 }
 
+
 // ===== FAQ ACCORDION =====
 document.querySelectorAll(".faq-question").forEach(q => {
   q.addEventListener("click", () => {
     const item = q.parentElement;
 
-    // close others
     document.querySelectorAll(".faq-item").forEach(i => {
       if (i !== item) i.classList.remove("active");
     });
 
-    // toggle current
     item.classList.toggle("active");
   });
 });
 
+
 // ===== APPLICATIONS SLIDER =====
 const slider = document.querySelector(".app-slider");
+const appNext = document.querySelector(".app-next");
+const appPrev = document.querySelector(".app-prev");
 
-document.querySelector(".app-next").onclick = () => {
+appNext?.addEventListener("click", () => {
   slider.scrollBy({ left: 420, behavior: "smooth" });
-};
+});
 
-document.querySelector(".app-prev").onclick = () => {
+appPrev?.addEventListener("click", () => {
   slider.scrollBy({ left: -420, behavior: "smooth" });
-};
+});
