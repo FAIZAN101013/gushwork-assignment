@@ -867,3 +867,278 @@ gap: 20px;
     width: 100%;
   }
 }
+
+/* =========================
+   APPLICATION SECTION
+========================= */
+
+.applications {
+  padding: 100px 20px;
+  background: #fff;
+  border-bottom: 1px solid #E1E3E8;
+  position: relative;
+
+  /* texture */
+  background-image: url("noiseTexture.png");
+  background-repeat: repeat;
+  background-size: cover;
+  opacity: 1;
+}
+
+.app-container {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* HEADER */
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-text h2 {
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #0D0D0D;
+  max-width: 640px;
+}
+
+.app-text p {
+  margin-top: 16px;
+  font-size: 18px;
+  color: #4D545C;
+  max-width: 620px;
+  line-height: 160%;
+}
+
+/* ARROWS */
+.app-arrows {
+  display: flex;
+  gap: 16px;
+}
+
+.app-arrows button {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 1px solid #CFD1D4;
+  background: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* SLIDER */
+.app-slider {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+
+/* CARD */
+.app-card {
+  min-width: 400px;
+  height: 420px;
+  border-radius: 32px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* IMAGE */
+.app-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.6) 50%,
+    rgba(0,0,0,0.9) 100%
+  );
+}
+
+/* TEXT */
+.card-content {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  color: white;
+}
+
+.card-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 15px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* HOVER EFFECT */
+.app-card:hover img {
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+/* =========================
+   PROCESS SECTION
+========================= */
+
+.process {
+  padding: 100px 20px;
+  background: #fff;
+  border-bottom: 1px solid #E1E3E8;
+  position: relative;
+
+  /* texture */
+  background-image: url("noiseTexture.png");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+.process-container {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  align-items: center;
+}
+
+/* HEADER */
+.process-header {
+  text-align: center;
+  max-width: 700px;
+}
+
+.process-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #0D0D0D;
+  margin-bottom: 16px;
+}
+
+.process-header p {
+  font-size: 16px;
+  color: #6B7280;
+  line-height: 1.6;
+}
+
+/* CARD */
+.process-card {
+  width: 100%;
+  background: #F9FAFB;
+  border: 1px solid #E1E3E8;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+/* TABS */
+.tabs {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tab {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #E1E3E8;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab.active {
+  background: #2b3990;
+  color: white;
+  border: none;
+}
+
+/* CONTENT */
+.process-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* LEFT */
+.process-text {
+  flex: 1;
+}
+
+.process-text h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.process-text p {
+  color: #6B7280;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.process-text ul {
+  list-style: none;
+}
+
+.process-text li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+/* bullet */
+.process-text li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2b3990;
+}
+
+/* RIGHT IMAGE */
+.process-image {
+  flex: 1;
+}
+
+.process-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .app-slider {
+    overflow-x: scroll;
+  }
+
+  .app-card {
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-content {
+    flex-direction: column;
+  }
+}

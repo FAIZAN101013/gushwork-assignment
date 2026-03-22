@@ -113,3 +113,14 @@ document.querySelectorAll(".faq-question").forEach(q => {
     item.classList.toggle("active");
   });
 });
+
+// ===== APPLICATIONS SLIDER =====
+const slider = document.querySelector(".app-slider");
+
+document.querySelector(".app-next").onclick = () => {
+  slider.scrollBy({ left: 420, behavior: "smooth" });
+};
+
+document.querySelector(".app-prev").onclick = () => {
+  slider.scrollBy({ left: -420, behavior: "smooth" });
+};
