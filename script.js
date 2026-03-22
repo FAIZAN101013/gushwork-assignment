@@ -177,3 +177,27 @@ window.addEventListener("click", (e) => {
     quoteModal.classList.remove("show");
   }
 });
+
+
+const productBar = document.getElementById("productBar");
+
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  let currentScroll = window.scrollY;
+
+  if (currentScroll > 100) {
+    // SCROLL DOWN → HIDE HEADER
+    if (currentScroll > lastScroll) {
+      header.classList.add("hide");
+      productBar.classList.add("sticky-top"); // move up
+    } 
+    // SCROLL UP → SHOW HEADER
+    else {
+      header.classList.remove("hide");
+      productBar.classList.remove("sticky-top"); // back below header
+    }
+  }
+
+  lastScroll = currentScroll;
+});
