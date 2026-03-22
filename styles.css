@@ -187,11 +187,23 @@ gap: 12px;
 }
 
 .badges span {
-padding: 8px 12px;
-background: #F7F8F9;
-border: 1px solid #E1E3E8;
-border-radius: 6px;
-font-size: 14px;
+display: inline-flex;        /* IMPORTANT */
+  align-items: center;         /* vertical center */
+  gap: 8px;
+
+  padding: 8px 12px;
+  background: #F7F8F9;
+  border: 1px solid #E1E3E8;
+  border-radius: 6px;
+
+  font-size: 14px;
+  line-height: 1;     
+}
+
+.badges span svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
 }
 
 /* TITLE */
@@ -212,7 +224,9 @@ gap: 16px;
 }
 
 .features li {
-font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* PRICE CARD */
@@ -264,10 +278,18 @@ border: none;
 }
 
 .btn-secondary {
-border: 1px solid #2B3990;
-padding: 16px 24px;
-border-radius: 12px;
-background: transparent;
+  display: inline-flex;        /* IMPORTANT */
+  align-items: center;
+  gap: 8px;
+
+  border: 1px solid #2B3990;
+  padding: 16px 24px;
+  border-radius: 12px;
+  background: transparent;
+}
+.btn-secondary svg {
+  width: 14px;
+  height: 14px;
 }
 
 /* ================= TRUSTED ================= */
@@ -315,6 +337,57 @@ height: auto;
 
 .right h1 {
 font-size: 36px;
+}
+
+.logos {
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+}
+/* ================= RESPONSIVE FIX ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+.hero-content {
+flex-direction: column;
+gap: 40px;
+}
+
+.left, .right {
+width: 100%;
+}
+
+.carousel {
+width: 100%;
+height: auto;
+}
+
+.right h1 {
+font-size: 42px;
+}
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+.nav-links {
+display: none;
+}
+
+.hero {
+padding: 40px 20px;
+}
+
+.hero-content {
+gap: 30px;
+}
+
+.right h1 {
+font-size: 32px;
+}
+
+.buttons {
+flex-direction: column;
 }
 
 .logos {
