@@ -98,3 +98,18 @@ function moveLens(e) {
     `-${(x * zoomLevel) - preview.offsetWidth / 2}px 
      -${(y * zoomLevel) - preview.offsetHeight / 2}px`;
 }
+
+// ===== FAQ ACCORDION =====
+document.querySelectorAll(".faq-question").forEach(q => {
+  q.addEventListener("click", () => {
+    const item = q.parentElement;
+
+    // close others
+    document.querySelectorAll(".faq-item").forEach(i => {
+      if (i !== item) i.classList.remove("active");
+    });
+
+    // toggle current
+    item.classList.toggle("active");
+  });
+});

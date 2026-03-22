@@ -334,6 +334,28 @@ border: none;
   height: 14px;
 }
 
+/* HERO FEATURES */
+.hero-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero-features li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4D545C;
+}
+
+.hero-features li svg {
+  flex-shrink: 0;
+}
+
 /* ================= TRUSTED ================= */
 .trusted {
 margin-top: 100px;
@@ -449,4 +471,399 @@ flex-wrap: wrap;
 justify-content: center;
 gap: 20px;
 }
+}
+
+/* ================= TECHNICAL SPECS SECTION ================= */
+
+.specs {
+  background: #111827;
+  padding: 100px 20px;
+}
+
+.specs-container {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* HEADER */
+.specs-header h2 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.specs-header p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.8);
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* TABLE WRAPPER */
+.specs-table {
+  display: flex;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* COLUMN */
+.specs-col {
+  flex: 1;
+}
+
+/* HEADER ROW */
+.table-head {
+  background: #374151;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 24px;
+}
+
+/* ROW */
+.row {
+  padding: 16px 24px;
+  font-size: 16px;
+  color: #fff;
+  background: #1F2937;
+  border-top: 1px solid #374151;
+}
+
+/* BUTTON */
+.specs-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.specs-btn button {
+  padding: 14px 20px;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.specs-btn button:hover {
+  background: #fff;
+  color: #111827;
+}
+
+/* ================= FEATURES SECTION ================= */
+
+.features {
+  background: #ffffff;
+  padding: 100px 20px;
+  border-bottom: 1px solid #E1E3E8;
+  position: relative;
+}
+
+/* subtle texture (optional) */
+.features::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+/* CONTAINER */
+.features-container {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADER */
+.features-header h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #0D0D0D;
+  margin-bottom: 10px;
+}
+
+.features-header p {
+  font-size: 18px;
+  color: #6A7077;
+  max-width: 800px;
+  line-height: 1.6;
+}
+
+/* GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+.feature-card {
+  background: #ffffff;
+  border: 1px solid #CFD1D4;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: 0.3s;
+  box-shadow: 0px 2px 4px rgba(27, 28, 29, 0.04);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+}
+
+/* ICON */
+.icon {
+  font-size: 24px;
+  color: #2B3990;
+  display: flex;
+  align-items: center;
+}
+
+.icon i {
+  font-size: 28px;
+}
+
+/* TITLE */
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #0D0D0D;
+}
+
+/* TEXT */
+.feature-card p {
+  font-size: 16px;
+  color: #535A61;
+  line-height: 1.5;
+}
+
+/* BUTTON */
+.features-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.features-btn button {
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: none;
+  background: #2B3990;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.features-btn button:hover {
+  background: #1f2a6d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .features {
+    padding: 60px 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-header h2 {
+    font-size: 32px;
+  }
+
+  .features-header p {
+    font-size: 16px;
+  }
+
+  .feature-card {
+    padding: 16px;
+  }
+
+  .feature-card h3 {
+    font-size: 18px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+  }
+
+  .features-btn button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   FAQ SECTION
+========================= */
+
+.faq {
+  padding: 100px 20px;
+  background: #fff;
+  border-bottom: 1px solid #E1E3E8;
+}
+
+.faq-container {
+  max-width: 1240px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+}
+
+/* TITLE */
+.faq h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #0D0D0D;
+}
+
+.faq h2 span {
+  color: #2B3990;
+}
+
+/* FAQ LIST */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ITEM */
+.faq-item {
+  border: 1px solid #E1E3E8;
+  border-radius: 12px;
+  background: #F9FAFB;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* QUESTION */
+.faq-question {
+  padding: 18px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* ICON */
+.faq-question .icon {
+  font-size: 14px;
+  color: #6B7280;
+}
+
+/* ANSWER */
+.faq-answer {
+  padding: 0 20px 18px;
+  font-size: 15px;
+  color: #6A7077;
+  display: none;
+  line-height: 1.5;
+}
+
+/* ACTIVE */
+.faq-item.active {
+  background: #fff;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.05);
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* =========================
+   CTA BOX
+========================= */
+
+.faq-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid #E1E3E8;
+  background: #F9FAFB;
+  gap: 20px;
+}
+
+.cta-text h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.cta-text p {
+  color: #6A7077;
+  font-size: 14px;
+}
+
+/* FORM */
+.cta-form {
+  display: flex;
+  gap: 10px;
+}
+
+.cta-form input {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #CFD1D4;
+  min-width: 220px;
+}
+
+.cta-form button {
+  padding: 12px 20px;
+  background: #2B3990;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cta-form button:hover {
+  background: #1f2a6d;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .faq-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cta-form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .cta-form input {
+    width: 100%;
+  }
+
+  .cta-form button {
+    width: 100%;
+  }
 }
