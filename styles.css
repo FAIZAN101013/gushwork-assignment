@@ -344,6 +344,9 @@ list-style: none;
 display: flex;
 flex-direction: column;
 gap: 16px;
+
+  min-height: 500px;
+background-image: url("noiseTexture.png")!important;
 }
 
 .features li {
@@ -426,6 +429,7 @@ border: none;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  background-image: url("");
 }
 
 .hero-features li {
@@ -579,31 +583,6 @@ filter: grayscale(100%);
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-.hero-content {
-flex-direction: column;
-gap: 40px;
-}
-
-.left, .right {
-width: 100%;
-}
-
-.carousel {
-width: 100%;
-height: auto;
-}
-
-.right h1 {
-font-size: 36px;
-}
-
-.logos {
-flex-wrap: wrap;
-justify-content: center;
-gap: 20px;
-}
-}
 
 
 /* PHONE FIELD */
@@ -889,47 +868,6 @@ gap: 20px;
   background: #1f2a6d;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .features {
-    padding: 60px 20px;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .features-header h2 {
-    font-size: 32px;
-  }
-
-  .features-header p {
-    font-size: 16px;
-  }
-
-  .feature-card {
-    padding: 16px;
-  }
-
-  .feature-card h3 {
-    font-size: 18px;
-  }
-
-  .feature-card p {
-    font-size: 14px;
-  }
-
-  .features-btn button {
-    padding: 12px 20px;
-    font-size: 14px;
-  }
-}
 
 /* =========================
    FAQ SECTION
@@ -939,6 +877,7 @@ gap: 20px;
   padding: 100px 20px;
   background: #fff;
   border-bottom: 1px solid #E1E3E8;
+  background-image: url("noiseTexture.png");
 }
 
 .faq-container {
@@ -1064,26 +1003,6 @@ gap: 20px;
   background: #1f2a6d;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .faq-cta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .cta-form {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .cta-form input {
-    width: 100%;
-  }
-
-  .cta-form button {
-    width: 100%;
-  }
-}
 
 /* =========================
    APPLICATION SECTION
@@ -1990,65 +1909,391 @@ gap: 20px;
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .app-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+.hero-content {
+flex-direction: column;
+gap: 40px;
+}
+
+.left, .right {
+width: 100%;
+}
+
+.carousel {
+width: 100%;
+height: auto;
+}
+
+.right h1 {
+font-size: 36px;
+}
+
+.logos {
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+}
+
+
+/* =========================
+   GLOBAL MOBILE FIXES
+========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0;
   }
 
+  section {
+    padding: 60px 20px !important;
+  }
+
+  h1 {
+    font-size: 28px !important;
+    line-height: 1.3;
+  }
+
+  h2 {
+    font-size: 24px !important;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+}
+
+/* =========================
+   HERO SECTION (MOST IMPORTANT)
+========================= */
+@media (max-width: 768px) {
+
+  .hero-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  /* IMAGE FIX */
+  .carousel {
+    width: 100%;
+    height: 260px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* KEY FIX */
+  }
+
+  /* THUMBNAILS */
+  .thumbnails {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+  }
+
+  .thumb {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  /* TEXT */
+  .right h1 {
+    font-size: 26px;
+  }
+
+}
+
+/* =========================
+   FEATURES GRID
+========================= */
+@media (max-width: 768px) {
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+}
+
+/* =========================
+   PROCESS SECTION
+========================= */
+@media (max-width: 768px) {
+
+  .process-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .process-image img {
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+  }
+
+}
+
+/* =========================
+   TESTIMONIAL
+========================= */
+@media (max-width: 768px) {
+
+  .test-cards {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+}
+
+/* =========================
+   APPLICATION SLIDER
+========================= */
+@media (max-width: 768px) {
+
   .app-slider {
-    overflow-x: scroll;
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
   }
 
   .app-card {
-    min-width: 300px;
+    min-width: 260px;
+  }
+
+}
+
+/* =========================
+   FAQ + CTA
+========================= */
+@media (max-width: 768px) {
+
+  .faq-cta {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cta-form {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta-form input,
+  .cta-form button {
+    width: 100%;
+  }
+
+}
+
+/* =========================
+   FINAL CTA SECTION
+========================= */
+@media (max-width: 768px) {
+
+  .cta-box {
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .cta-left h2 {
+    font-size: 24px;
+  }
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+@media (max-width: 768px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+}
+
+/* ================= GLOBAL FIX ================= */
+html, body {
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ================= CONTAINER FIX ================= */
+section,
+.hero,
+.features,
+.faq,
+.process,
+.applications,
+.specs {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* ================= HERO FIX ================= */
+.hero-content {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.left, .right {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ================= PRODUCT BAR FIX ================= */
+.product-bar {
+  position: sticky;
+  top: 77px;
+  z-index: 999;
+  flex-wrap: wrap;
+}
+
+.product-btn {
+  white-space: nowrap;
+}
+
+/* ================= PROCESS IMAGE FIX ================= */
+.process-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* ================= GRID FIX ================= */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ================= MOBILE FIX ================= */
+@media (max-width: 1024px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-content {
+    flex-direction: column;
   }
 }
 
 @media (max-width: 768px) {
+
+  /* REMOVE RIGHT WHITE SPACE */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 30px 20px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .right h1 {
+    font-size: 26px;
+  }
+
+  /* PRODUCT BAR */
+  .product-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .product-btn {
+    width: 100%;
+  }
+
+  /* FEATURES */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* APPLICATION SCROLL FIX */
+  .app-slider {
+    overflow-x: auto;
+    display: flex;
+    gap: 16px;
+  }
+
+  .app-card {
+    min-width: 260px;
+  }
+
+  /* PROCESS */
   .process-content {
     flex-direction: column;
   }
-}
 
-@media (max-width: 768px) {
-  .test-cards {
-    flex-direction: column;
-  }
-
-  .test-card {
-    min-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
+  /* CTA */
   .cta-box {
     flex-direction: column;
-    gap: 40px;
   }
 
   .cta-form {
     width: 100%;
   }
 
-  .cta-left h2 {
-    font-size: 32px;
+  .cta-form input,
+  .cta-form button {
+    width: 100%;
   }
-}
 
-@media (max-width: 768px) {
+  /* FOOTER */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+}
 
-  .footer-top {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
+@media (max-width: 480px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr;
   }
 
-  .footer-bottom-inner {
-    flex-direction: column;
-    gap: 10px;
+  .right h1 {
+    font-size: 22px;
   }
 }
